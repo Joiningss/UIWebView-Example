@@ -20,6 +20,7 @@
 		BBBCBDED14D89EEE00F83D39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBCBDCE14D89EEE00F83D39 /* Foundation.framework */; };
 		BBBCBDF514D89EEE00F83D39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBCBDF314D89EEE00F83D39 /* InfoPlist.strings */; };
 		BBBCBDF814D89EEE00F83D39 /* SimpleWebBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBCBDF714D89EEE00F83D39 /* SimpleWebBrowserTests.m */; };
+		F7044E221FAF098E000DA039 /* crash.html in Resources */ = {isa = PBXBuildFile; fileRef = F7044E211FAF098E000DA039 /* crash.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,7 @@
 		BBBCBDDA14D89EEE00F83D39 /* SimpleWebBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleWebBrowser-Prefix.pch"; sourceTree = "<group>"; };
 		BBBCBDDB14D89EEE00F83D39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BBBCBDDC14D89EEE00F83D39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BBBCBDDE14D89EEE00F83D39 /* SimpleBrowserViewController.h */ = {isa = PBXFileReference; path = SimpleBrowserViewController.h; sourceTree = "<group>"; };
+		BBBCBDDE14D89EEE00F83D39 /* SimpleBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleBrowserViewController.h; sourceTree = "<group>"; };
 		BBBCBDDF14D89EEE00F83D39 /* SimpleBrowserViewcontroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleBrowserViewcontroller.m; sourceTree = "<group>"; };
 		BBBCBDE214D89EEE00F83D39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SimpleBrowserViewController.xib; sourceTree = "<group>"; };
 		BBBCBDE914D89EEE00F83D39 /* SimpleWebBrowserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleWebBrowserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +53,7 @@
 		BBBCBDF414D89EEE00F83D39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BBBCBDF614D89EEE00F83D39 /* SimpleWebBrowserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleWebBrowserTests.h; sourceTree = "<group>"; };
 		BBBCBDF714D89EEE00F83D39 /* SimpleWebBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleWebBrowserTests.m; sourceTree = "<group>"; };
+		F7044E211FAF098E000DA039 /* crash.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = crash.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		BBBCBDD214D89EEE00F83D39 /* SimpleWebBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				F7044E201FAF0975000DA039 /* web */,
 				BBBCBDDB14D89EEE00F83D39 /* AppDelegate.h */,
 				BBBCBDDC14D89EEE00F83D39 /* AppDelegate.m */,
 				BBBCBDDE14D89EEE00F83D39 /* SimpleBrowserViewController.h */,
@@ -149,6 +152,14 @@
 				BBBCBDF314D89EEE00F83D39 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7044E201FAF0975000DA039 /* web */ = {
+			isa = PBXGroup;
+			children = (
+				F7044E211FAF098E000DA039 /* crash.html */,
+			);
+			path = web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,11 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Stanford University";
+				TargetAttributes = {
+					BBBCBDC714D89EEE00F83D39 = {
+						DevelopmentTeam = U9TAV94U54;
+					};
+				};
 			};
 			buildConfigurationList = BBBCBDC214D89EEE00F83D39 /* Build configuration list for PBXProject "SimpleWebBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -223,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBBCBDD714D89EEE00F83D39 /* InfoPlist.strings in Resources */,
+				F7044E221FAF098E000DA039 /* crash.html in Resources */,
 				BBBCBDE314D89EEE00F83D39 /* SimpleBrowserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,9 +373,11 @@
 		BBBCBDFC14D89EEE00F83D39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = U9TAV94U54;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleWebBrowser/SimpleWebBrowser-Prefix.pch";
 				INFOPLIST_FILE = "SimpleWebBrowser/SimpleWebBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -367,9 +386,11 @@
 		BBBCBDFD14D89EEE00F83D39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = U9TAV94U54;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleWebBrowser/SimpleWebBrowser-Prefix.pch";
 				INFOPLIST_FILE = "SimpleWebBrowser/SimpleWebBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,6 +449,7 @@
 				BBBCBDFD14D89EEE00F83D39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBBCBDFE14D89EEE00F83D39 /* Build configuration list for PBXNativeTarget "SimpleWebBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +458,7 @@
 				BBBCBE0014D89EEE00F83D39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

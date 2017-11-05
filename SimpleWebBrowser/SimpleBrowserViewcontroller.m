@@ -33,7 +33,11 @@
 
 - (void)viewDidLoad
 {
-    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+    //crash on this url:
+    NSURL *url = [NSURL URLWithString:@"https://wstream.video/mobi/iu94ezdbr6h4"];
+    //crash on this loacl html
+    //NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"crash" ofType:@"html"]];
+
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
     [super viewDidLoad];
